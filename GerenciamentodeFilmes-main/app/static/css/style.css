@@ -1,0 +1,39 @@
+/* Garante o fundo escuro padrão caso o CDN do Tailwind falhe */
+body {
+    background-color: #0f172a !important; /* Cor slate-900 */
+    color: #f8fafc !important; /* Cor slate-50 */
+    font-family: system-ui, -apple-system, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Estilos personalizados para os cards */
+.movie-card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.movie-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px -5px rgba(251, 191, 36, 0.2);
+}
+
+/* Personalização da barra de rolagem */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
