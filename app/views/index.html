@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Página Principal - CineApp{% endblock %}
+
+{% block content %}
+<div class="bg-slate-800 p-8 rounded-xl shadow-2xl w-full max-w-lg text-center border border-slate-700">
+    <span class="text-5xl">🍿</span>
+    <h1 class="text-3xl font-bold mt-4 text-slate-100">Bem-vindo, <span class="text-amber-400">{{ username }}</span>!</h1>
+    <p class="text-slate-400 mt-2">Esta é a sua página principal do gerenciador de filmes.</p>
+    
+    <div class="mt-6 p-4 bg-slate-900/50 rounded-lg border border-slate-700 text-left text-sm text-slate-300">
+        <p class="font-semibold text-amber-400 mb-1">Próximos passos planejados:</p>
+        <ul class="list-disc list-inside space-y-1 text-slate-400">
+            <li>Filmes em destaque do momento</li>
+            <li>Lançamentos "Em Breve"</li>
+            <li>Vencedores do Oscar 2026</li>
+            <li>Sistema de avaliação estilo IMDb e Rotten Tomatoes</li>
+        </ul>
+    </div>
+
+    <div class="mt-6">
+        <a href="{{ url_for('auth.logout') }}" 
+           class="inline-block px-6 py-2 bg-rose-600 hover:bg-rose-700 text-white font-medium rounded-lg transition duration-200">
+            Sair da Conta
+        </a>
+    </div>
+</div>
+{% endblock %}
